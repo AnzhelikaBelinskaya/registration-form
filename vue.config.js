@@ -1,4 +1,10 @@
 module.exports = {
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/form/'
+    : '/',
+    configureWebpack: {
+        devtool: 'cheap-module-eval-source-map'
+      },
     css: {
         loaderOptions: {
             sass: {
@@ -9,5 +15,6 @@ module.exports = {
             },
            
         }
-    }
+    },
+   
 }
